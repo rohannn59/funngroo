@@ -194,6 +194,9 @@ nav{
   letter-spacing:-0.02em;
 }
 
+/* Logo image sizing (used when `logo.png` is present) */
+.logo-img{height:clamp(40px,5vw,64px);width:auto;display:block}
+
 .nav-links{
   display:flex;
   gap:4px;
@@ -1246,7 +1249,9 @@ footer{
 
 <!-- ════════ NAV ════════ -->
 <nav id="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-logo" onclick="showPage('home')" role="link" tabindex="0" aria-label="Funngro home">Funngro</div>
+  <div class="nav-logo" onclick="showPage('home')" role="link" tabindex="0" aria-label="Funngro home">
+    <img src="logo.png" alt="Funngro logo" class="logo-img">
+  </div>
 
   <ul class="nav-links" role="list">
     <li><a onclick="showPage('home')" id="nav-home" class="active" tabindex="0" aria-current="page">Home</a></li>
@@ -1978,7 +1983,9 @@ footer{
 <footer role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="nav-logo" aria-label="Funngro">Funngro</div>
+      <div class="nav-logo" aria-label="Funngro">
+        <img src="logo.png" alt="Funngro logo" class="logo-img">
+      </div>
       <p>India's biggest teen earning platform. Empowering teenagers to earn, learn, and grow — one task at a time.</p>
       <div class="footer-badges">
         <span class="badge badge-green">🦈 Shark Tank India</span>
