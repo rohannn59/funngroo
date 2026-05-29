@@ -22,6 +22,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_IN">
+<meta property="og:image:alt" content="Funngro — Teen earning app preview image">
 
 <!-- ── Twitter Card ── -->
 <meta name="twitter:card" content="summary_large_image">
@@ -29,10 +30,12 @@
 <meta name="twitter:title" content="Funngro — India's Biggest Teen Earning Platform">
 <meta name="twitter:description" content="5 lakh+ teens earning real money via UPI. Shark Tank India Season 2. Free to join.">
 <meta name="twitter:image" content="https://rohannn59.github.io/funngro/og-image.png">
+<meta name="twitter:creator" content="@funngro">
 
-<!-- ── Favicon ── -->
-<link rel="icon" type="image/jpeg" href="fevicon.jpeg">
-<link rel="apple-touch-icon" href="fevicon.jpeg">
+<!-- ── Favicon & Manifest ── -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="manifest" href="site.webmanifest">
 <meta name="theme-color" content="#7c3aed">
 <meta name="msapplication-TileColor" content="#7c3aed">
 
@@ -1250,15 +1253,15 @@ footer{
 <!-- ════════ NAV ════════ -->
 <nav id="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-logo" onclick="showPage('home')" role="link" tabindex="0" aria-label="Funngro home">
-    <img src="logo.png" alt="Funngro logo" class="logo-img">
+    <img src="logo.png" alt="Funngro logo" class="logo-img" loading="eager" decoding="sync" fetchpriority="high">
   </div>
 
   <ul class="nav-links" role="list">
-    <li><a onclick="showPage('home')" id="nav-home" class="active" tabindex="0" aria-current="page">Home</a></li>
-    <li><a onclick="showPage('teen')" id="nav-teen" tabindex="0">For Teens</a></li>
-    <li><a onclick="showPage('brand')" id="nav-brand" tabindex="0">For Brands</a></li>
-    <li><a onclick="showPage('about')" id="nav-about" tabindex="0">About</a></li>
-    <li><a onclick="showPage('contact')" id="nav-contact" tabindex="0">Contact</a></li>
+    <li><a href="#home" onclick="showPage('home')" id="nav-home" class="active" aria-current="page">Home</a></li>
+    <li><a href="#teen" onclick="showPage('teen')" id="nav-teen">For Teens</a></li>
+    <li><a href="#brand" onclick="showPage('brand')" id="nav-brand">For Brands</a></li>
+    <li><a href="#about" onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a href="#contact" onclick="showPage('contact')" id="nav-contact">Contact</a></li>
   </ul>
 
   <div class="nav-cta" aria-label="Primary actions">
@@ -1275,12 +1278,12 @@ footer{
 </nav>
 
 <!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
-  <a onclick="showPage('home');closeMobileMenu()" id="mnav-home" class="active" tabindex="-1">Home</a>
-  <a onclick="showPage('teen');closeMobileMenu()" id="mnav-teen" tabindex="-1">For Teens</a>
-  <a onclick="showPage('brand');closeMobileMenu()" id="mnav-brand" tabindex="-1">For Brands</a>
-  <a onclick="showPage('about');closeMobileMenu()" id="mnav-about" tabindex="-1">About</a>
-  <a onclick="showPage('contact');closeMobileMenu()" id="mnav-contact" tabindex="-1">Contact</a>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+  <a href="#home" onclick="showPage('home');closeMobileMenu()" id="mnav-home" class="active" tabindex="-1">Home</a>
+  <a href="#teen" onclick="showPage('teen');closeMobileMenu()" id="mnav-teen" tabindex="-1">For Teens</a>
+  <a href="#brand" onclick="showPage('brand');closeMobileMenu()" id="mnav-brand" tabindex="-1">For Brands</a>
+  <a href="#about" onclick="showPage('about');closeMobileMenu()" id="mnav-about" tabindex="-1">About</a>
+  <a href="#contact" onclick="showPage('contact');closeMobileMenu()" id="mnav-contact" tabindex="-1">Contact</a>
   <div class="mobile-menu-cta">
     <button class="btn-primary" onclick="showPage('teen');closeMobileMenu()">🚀 Start Earning Free</button>
     <button class="btn-ghost" onclick="showPage('brand');closeMobileMenu()">📲 For Brands</button>
@@ -1677,7 +1680,7 @@ footer{
   <section style="padding-top:clamp(80px,10vw,100px);background:radial-gradient(ellipse at 50% 0%,rgba(124,58,237,0.15) 0%,transparent 60%)" aria-labelledby="teen-heading">
     <div style="text-align:center;max-width:580px;margin:0 auto">
       <div class="section-label" style="margin:0 auto 16px">🚀 For Teens</div>
-      <h1 class="section-title" id="teen-heading" style="font-size:clamp(30px,6vw,56px)">Earn real money.<br><span class="gradient-text">Build real skills.</span></h1>
+      <h2 class="section-title" id="teen-heading" style="font-size:clamp(30px,6vw,56px)">Earn real money.<br><span class="gradient-text">Build real skills.</span></h2>
       <p class="section-sub" style="text-align:center;margin:14px auto">You're talented. India's biggest brands are waiting to work with you. All you need to do is show up.</p>
       <div style="margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
         <button class="btn-hero-primary" aria-label="Start earning on Funngro for free">🚀 Start Earning Free</button>
@@ -1762,7 +1765,7 @@ footer{
   <section style="padding-top:clamp(80px,10vw,100px);background:radial-gradient(ellipse at 50% 0%,rgba(6,182,212,0.12) 0%,transparent 60%)" aria-labelledby="brand-heading">
     <div style="text-align:center;max-width:600px;margin:0 auto">
       <div class="section-label" style="margin:0 auto 16px">🏢 For Brands</div>
-      <h1 class="section-title" id="brand-heading" style="font-size:clamp(30px,6vw,56px)">Unlock the power of<br><span class="gradient-text">Gen Z marketing</span></h1>
+      <h2 class="section-title" id="brand-heading" style="font-size:clamp(30px,6vw,56px)">Unlock the power of<br><span class="gradient-text">Gen Z marketing</span></h2>
       <p class="section-sub" style="text-align:center;margin:14px auto">Reach 70 lakh+ young Indians through authentic teen-created content. Lower cost, higher impact than traditional influencers.</p>
       <div style="margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
         <button class="btn-hero-primary" aria-label="Launch a brand campaign on Funngro">🚀 Launch Campaign</button>
@@ -1857,7 +1860,7 @@ footer{
   <section style="padding-top:clamp(80px,10vw,100px);background:radial-gradient(ellipse at 50% 0%,rgba(16,185,129,0.10) 0%,transparent 60%)" aria-labelledby="about-heading">
     <div style="text-align:center;max-width:560px;margin:0 auto">
       <div class="section-label" style="margin:0 auto 16px">🌏 Our Story</div>
-      <h1 class="section-title" id="about-heading" style="font-size:clamp(28px,5.5vw,56px)">We're building<br><span class="gradient-text-green">India's teen economy</span></h1>
+      <h2 class="section-title" id="about-heading" style="font-size:clamp(28px,5.5vw,56px)">We're building<br><span class="gradient-text-green">India's teen economy</span></h2>
       <p class="section-sub" style="text-align:center;margin:14px auto">One task, one earning, one empowered teenager at a time.</p>
     </div>
   </section>
@@ -1917,7 +1920,7 @@ footer{
   <section style="padding-top:clamp(80px,10vw,100px)" aria-labelledby="contact-heading">
     <div style="text-align:center;max-width:500px;margin:0 auto 60px">
       <div class="section-label" style="margin:0 auto 16px">📬 Get in Touch</div>
-      <h1 class="section-title" id="contact-heading" style="font-size:clamp(26px,4.5vw,48px)">We'd love to<br><span class="gradient-text">hear from you</span></h1>
+      <h2 class="section-title" id="contact-heading" style="font-size:clamp(26px,4.5vw,48px)">We'd love to<br><span class="gradient-text">hear from you</span></h2>
       <p class="section-sub" style="text-align:center;margin:12px auto">Whether you're a teen wanting to start, a brand looking to collaborate, or press wanting to cover the story — we're here.</p>
     </div>
     <div class="two-col" style="align-items:flex-start;gap:clamp(24px,4vw,40px)">
@@ -1995,27 +1998,27 @@ footer{
     </div>
     <div class="footer-col">
       <h4>For Teens</h4>
-      <a onclick="showPage('teen')" tabindex="0">How to Earn</a>
-      <a onclick="showPage('teen')" tabindex="0">Earning Categories</a>
-      <a onclick="showPage('teen')" tabindex="0">Teenlancer Levels</a>
-      <a tabindex="0">Download App</a>
-      <a onclick="showPage('home')" tabindex="0">Success Stories</a>
+      <a href="#teen" onclick="showPage('teen')">How to Earn</a>
+      <a href="#teen" onclick="showPage('teen')">Earning Categories</a>
+      <a href="#teen" onclick="showPage('teen')">Teenlancer Levels</a>
+      <a href="#" aria-disabled="true">Download App</a>
+      <a href="#home" onclick="showPage('home')">Success Stories</a>
     </div>
     <div class="footer-col">
       <h4>For Brands</h4>
-      <a onclick="showPage('brand')" tabindex="0">Launch Campaign</a>
-      <a onclick="showPage('brand')" tabindex="0">UGC Campaigns</a>
-      <a onclick="showPage('brand')" tabindex="0">Market Research</a>
-      <a onclick="showPage('brand')" tabindex="0">Product Testing</a>
-      <a onclick="showPage('contact')" tabindex="0">Partner With Us</a>
+      <a href="#brand" onclick="showPage('brand')">Launch Campaign</a>
+      <a href="#brand" onclick="showPage('brand')">UGC Campaigns</a>
+      <a href="#brand" onclick="showPage('brand')">Market Research</a>
+      <a href="#brand" onclick="showPage('brand')">Product Testing</a>
+      <a href="#contact" onclick="showPage('contact')">Partner With Us</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
-      <a onclick="showPage('about')" tabindex="0">About Funngro</a>
-      <a onclick="showPage('about')" tabindex="0">Shark Tank Story</a>
-      <a onclick="showPage('contact')" tabindex="0">Contact Us</a>
-      <a tabindex="0">Privacy Policy</a>
-      <a tabindex="0">Terms of Service</a>
+      <a href="#about" onclick="showPage('about')">About Funngro</a>
+      <a href="#about" onclick="showPage('about')">Shark Tank Story</a>
+      <a href="#contact" onclick="showPage('contact')">Contact Us</a>
+      <a href="#privacy" aria-disabled="true">Privacy Policy</a>
+      <a href="#terms" aria-disabled="true">Terms of Service</a>
     </div>
   </div>
   <div class="footer-bottom">
