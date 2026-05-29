@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rohannn59.github.io/funngro/sitemap.xml
